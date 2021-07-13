@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/home.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ecommerce_app/pages/login_page.dart';
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: true,
       title: 'TheGorgeousLogin',
-      home: Home(),
+      home: LoginPage(),
     );
   }
 }
