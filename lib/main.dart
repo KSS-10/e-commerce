@@ -1,4 +1,5 @@
 
+import 'package:ecommerce_app/pages/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ecommerce_app/pages/login_page.dart';
@@ -16,10 +17,10 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: true,
       title: 'TheGorgeousLogin',
-      home: LoginPage(),
+      home: HomeScreen(),
     );
   }
 }
