@@ -27,10 +27,10 @@ List<Product> demoProducts = [
   Product(
     id: 1,
     images: [
-      "assets/images/ps4_console_white_1.png",
-      "assets/images/ps4_console_white_2.png",
-      "assets/images/ps4_console_white_3.png",
-      "assets/images/ps4_console_white_4.png",
+      "https://rukminim1.flixcart.com/image/800/960/kqjtd3k0/shirt/2/c/4/42-cf-533-xl-copper-fit-original-imag4jayqmfmvgav.jpeg?q=50",
+      "https://rukminim1.flixcart.com/image/800/960/kqjtd3k0/shirt/6/w/g/42-cf-533-xl-copper-fit-original-imag4jaybyzy6czw.jpeg?q=50",
+      "https://rukminim1.flixcart.com/image/800/960/kqjtd3k0/shirt/c/7/z/42-cf-533-xl-copper-fit-original-imag4jaysqdwvsp7.jpeg?q=50",
+      "https://rukminim1.flixcart.com/image/800/960/kqgyhe80/shirt/g/q/x/38-cf-528-m-copper-fit-original-imag4h62qsudhzfh.jpeg?q=50",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -39,7 +39,7 @@ List<Product> demoProducts = [
       Colors.white,
     ],
     title: "Wireless Controller for PS4™",
-    price: 64.99,
+    price: 549,
     description: description,
     rating: 4.8,
     isFavourite: true,
@@ -48,7 +48,7 @@ List<Product> demoProducts = [
   Product(
     id: 2,
     images: [
-      "assets/images/Image Popular Product 2.png",
+      "https://rukminim1.flixcart.com/image/800/960/kq8dua80/shirt/j/d/w/xl-cf-501-xl-copper-fit-original-imag4adfrgmac8dy.jpeg?q=50",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -65,7 +65,7 @@ List<Product> demoProducts = [
   Product(
     id: 3,
     images: [
-      "assets/images/glap.png",
+      "https://rukminim1.flixcart.com/image/800/960/kqco5u80/shirt/l/x/w/36-cf-519-s-copper-fit-original-imag4dutbamfv7s8.jpeg?q=50",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -83,7 +83,7 @@ List<Product> demoProducts = [
   Product(
     id: 4,
     images: [
-      "assets/images/wireless headset.png",
+      "https://rukminim1.flixcart.com/image/800/960/kqgyhe80/shirt/g/q/x/38-cf-528-m-copper-fit-original-imag4h62qsudhzfh.jpeg?q=50",
     ],
     colors: [
       Color(0xFFF6625E),

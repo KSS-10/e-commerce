@@ -1,9 +1,10 @@
+import 'package:ecommerce_app/pages/details/details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ecommerce_app/models/Product.dart';
 
 import '../constants.dart';
-import '../size_config.dart';
+
 
 class ProductCard extends StatelessWidget {
   const ProductCard({
@@ -23,61 +24,71 @@ class ProductCard extends StatelessWidget {
       padding: EdgeInsets.only(left: (20/375.0)*screenWidth),
       child: SizedBox(
         width: (width/375.0)*screenWidth,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            AspectRatio(
-              aspectRatio: 1.02,
-              child: Container(
-                padding: EdgeInsets.all((20/375.0)*screenWidth),
-                decoration: BoxDecoration(
-                  color: kSecondaryColor.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(15),
+        child: GestureDetector(onTap:  
+          ()  {
+            //   Navigator.pushNamed(context,
+            // DetailsScreen.routeName,
+            // arguments: ProductDetailsArguments(product: product),);
+            //
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsScreen(product: product,))); 
+            }
+          ,
+                  child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              AspectRatio(
+                aspectRatio: 1.02,
+                child: Container(
+                  padding: EdgeInsets.all((20/375.0)*screenWidth),
+                  decoration: BoxDecoration(
+                    color: kSecondaryColor.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Image.network(product.images[0]),
                 ),
-                child: Image.asset(product.images[0]),
               ),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              product.title,
-              style: TextStyle(color: Colors.black),
-              maxLines: 2,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "\$${product.price}",
-                  style: TextStyle(
-                    fontSize: (18/375.0)*screenWidth,
-                    fontWeight: FontWeight.w600,
-                    color: kPrimaryColor,
-                  ),
-                ),
-                InkWell(
-                  borderRadius: BorderRadius.circular(50),
-                  onTap: () {},
-                  child: Container(
-                    padding: EdgeInsets.all((8/375.0)*screenWidth),
-                    height: (28/375.0)*screenWidth,
-                    width: (28/375.0)*screenWidth,
-                    decoration: BoxDecoration(
-                      color: product.isFavourite
-                          ? kPrimaryColor.withOpacity(0.15)
-                          : kSecondaryColor.withOpacity(0.1),
-                      shape: BoxShape.circle,
-                    ),
-                    child: SvgPicture.asset(
-                      "assets/icons/Heart Icon_2.svg",
-                      color: product.isFavourite
-                          ? Color(0xFFFF4848)
-                          : Color(0xFFDBDEE4),
+              const SizedBox(height: 10),
+              Text(
+                product.title,
+                style: TextStyle(color: Colors.black),
+                maxLines: 2,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "\$${product.price}",
+                    style: TextStyle(
+                      fontSize: (18/375.0)*screenWidth,
+                      fontWeight: FontWeight.w600,
+                      color: kPrimaryColor,
                     ),
                   ),
-                ),
-              ],
-            )
-          ],
+                  InkWell(
+                    borderRadius: BorderRadius.circular(50),
+                    onTap: () {},
+                    child: Container(
+                      padding: EdgeInsets.all((8/375.0)*screenWidth),
+                      height: (28/375.0)*screenWidth,
+                      width: (28/375.0)*screenWidth,
+                      decoration: BoxDecoration(
+                        color: product.isFavourite
+                            ? kPrimaryColor.withOpacity(0.15)
+                            : kSecondaryColor.withOpacity(0.1),
+                        shape: BoxShape.circle,
+                      ),
+                      child: SvgPicture.asset(
+                        "assets/icons/Heart Icon_2.svg",
+                        color: product.isFavourite
+                            ? Color(0xFFFF4848)
+                            : Color(0xFFDBDEE4),
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

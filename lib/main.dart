@@ -3,6 +3,7 @@ import 'package:ecommerce_app/pages/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ecommerce_app/pages/login_page.dart';
+import 'package:ecommerce_app/routes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: true,
       title: 'TheGorgeousLogin',
       home: HomeScreen(),
+      //routes: routes,
     );
   }
 }
