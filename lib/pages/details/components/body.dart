@@ -43,8 +43,8 @@ class Body extends StatelessWidget {
                             top: (15/375.0)*screenWidth,
                           ),
                           child: DefaultButton(
-                            text: "Add To Cart",
-                            press: () {},
+                            text: "Add To Cart"
+                           
                           ),
                         ),
                       ),
